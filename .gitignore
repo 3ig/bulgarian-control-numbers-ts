@@ -4,11 +4,6 @@ yarn-error.log
 npm-debug.log*
 package-lock.json
 
-# Build outputs
-build/
-dist/
-*.tsbuildinfo
-
 # Test results
 test-results/
 coverage/

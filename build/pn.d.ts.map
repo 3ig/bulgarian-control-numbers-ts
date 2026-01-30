@@ -1,0 +1,1 @@
+{"version":3,"file":"pn.d.ts","sourceRoot":"","sources":["../src/pn.ts"],"names":[],"mappings":"AAAA;;;GAGG;AAIH,cAAM,cAAc;IAClB,OAAO,CAAC,MAAM,CAAS;gBAEX,KAAK,EAAE,MAAM;IAQzB,IAAI,KAAK,IAAI,MAAM,CAElB;IAED,IAAI,OAAO,IAAI,OAAO,CAarB;CACF;AAED,eAAe,cAAc,CAAC"}
