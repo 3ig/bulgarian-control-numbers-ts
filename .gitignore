@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+yarn-error.log
+npm-debug.log*
+package-lock.json
+
+# Build outputs
+build/
+dist/
+*.tsbuildinfo
+
+# Test results
+test-results/
+coverage/
+*.log
+junit.xml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS files
+Thumbs.db
+.DS_Store

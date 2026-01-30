@@ -1,0 +1,107 @@
+Bulgarian Control Numbers (TypeScript Edition)
+===============================================
+
+[![npm version][npm-image]][npm-url]
+
+[npm-url]: https://www.npmjs.com/package/bulgarian-control-numbers
+[npm-image]: https://img.shields.io/npm/v/bulgarian-control-numbers.svg
+
+:bulgaria: Проверка на контролни цифри ползвани в България - ЕГН, ЛНЧ, Булстат, IBAN.
+
+> **Note**: This is a modernized TypeScript version of the original library by [Petar Petrov](https://github.com/petarov). The original JavaScript library can be found at [petarov/bulgarian-control-numbers](https://github.com/petarov/bulgarian-control-numbers). This version includes TypeScript support, modern build tooling (Vite), and ESM support while maintaining full backward compatibility.
+
+# Install
+
+    npm install bulgarian-control-numbers
+
+or
+
+    yarn add bulgarian-control-numbers
+
+or
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bulgarian-control-numbers@1.0.5/build/bgcn.min.js"></script>
+```
+
+# Usage
+
+As a node.js module (CommonJS):
+
+```javascript
+const BGCN = require('bulgarian-control-numbers').default;
+```
+
+As an ES module:
+
+```javascript
+import BGCN from 'bulgarian-control-numbers';
+```
+
+With TypeScript:
+
+```typescript
+import BGCN from 'bulgarian-control-numbers';
+
+const egn = BGCN.egn('0550290476');
+egn.isValid // true
+egn.value // '0550290476'
+egn.gender // 'f'
+egn.birthday.day // 29
+egn.birthday.month // 10
+egn.birthday.year // 2005
+
+const pn = BGCN.pn('1001122334'); // ЛНЧ
+pn.isValid // true
+
+const bulstat = BGCN.bulstat('BG131071587')
+bulstat.isValid // true
+bulstat.value // '131071587'
+
+const iban = BGCN.iban('BG15UNCR70001522604629');
+iban.isValid // true
+iban.value // 'BG15UNCR70001522604629'
+iban.accountNo // '22604629'
+iban.bic // 'UNCRBGSF'
+
+BGCN.isValid('BG131071587') // true
+BGCN.isValid('BG15UNCR70001522604629') // true
+```
+
+In a web page:
+
+```html
+<script type="text/javascript" src="bgcn.js"></script>
+<script>
+    var BGCN = BGCN.default;
+    var egn = BGCN.egn('0550290476');
+    // ...
+</script>
+```
+
+# Development
+
+Run `yarn install` to install dependencies.
+
+Run `yarn test` to run unit tests.
+
+Run `yarn build` to create a build (produces both UMD and ESM formats).
+
+Run `yarn type-check` to verify TypeScript types.
+
+# Credits
+
+**Original Author**: [Petar Petrov](https://github.com/petarov) - Original JavaScript implementation  
+**Modernization**: [3ig](https://github.com/3ig) - TypeScript migration, Vite build system, and ESM support
+
+This is a modernization of the original [bulgarian-control-numbers](https://github.com/petarov/bulgarian-control-numbers) library, converted to TypeScript with modern tooling while maintaining 100% backward compatibility.
+
+# References
+
+* [БСВ Консултинг - Контролни цифри ползвани в България](http://bsv-bg.com/контролни-цифри-ползвани-в-българия)
+* [Единен граждански номер](https://bg.wikipedia.org/wiki/Единен_граждански_номер)
+* [International Bank Account Number](https://en.wikipedia.org/wiki/International_Bank_Account_Number)
+
+# License
+
+[MIT](LICENSE) - Copyright (c) 2020 Petar Petrov (original author)

@@ -1,0 +1,71 @@
+{
+  "name": "bulgarian-control-numbers",
+  "version": "1.0.5",
+  "description": "Контролни цифри ползвани в България (ЕГН, ЛНЧ, Булстат, IBAN)",
+  "main": "build/bgcn.js",
+  "module": "build/bgcn.esm.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/bgcn.esm.js",
+      "require": "./build/bgcn.js"
+    }
+  },
+  "files": [
+    "build",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "prepare": "yarn run build",
+    "trypublish": "npm publish || true"
+  },
+  "repository": "https://github.com/3ig/bulgarian-control-numbers-ts.git",
+  "author": "Petar Petrov (https://github.com/petarov)",
+  "contributors": [
+    "Original author: Petar Petrov (https://github.com/petarov)",
+    "Modernization: 3ig (https://github.com/3ig)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3ig/bulgarian-control-numbers-ts/issues"
+  },
+  "homepage": "https://github.com/3ig/bulgarian-control-numbers-ts",
+  "keywords": [
+    "egn",
+    "bulstat",
+    "iban",
+    "bulgarian"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-minify": "^0.5.0",
+    "css-loader": "^6.10.0",
+    "file-loader": "^6.0.0",
+    "jest": "^29.0.1",
+    "jest-junit": "^16.0.0",
+    "prettier": "^2.0.1",
+    "prettier-webpack-plugin": "^1.2.0",
+    "style-loader": "^2.0.0",
+    "terser": "^5.46.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3",
+    "url-loader": "^4.0.0",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {},
+  "private": false
+}
