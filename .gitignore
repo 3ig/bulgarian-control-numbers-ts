@@ -10,6 +10,9 @@ coverage/
 *.log
 junit.xml
 
+# Documentation (internal guides)
+docs/
+
 # IDE and editor files
 .vscode/
 .idea/
