@@ -1,7 +1,7 @@
 Bulgarian Control Numbers (TypeScript Edition)
 ===============================================
 
-[![npm version][npm-image]][npm-url]
+[![CI](https://github.com/3ig/bulgarian-control-numbers-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/3ig/bulgarian-control-numbers-ts/actions/workflows/ci.yml) [![npm version][npm-image]][npm-url]
 
 [npm-url]: https://www.npmjs.com/package/bulgarian-control-numbers
 [npm-image]: https://img.shields.io/npm/v/bulgarian-control-numbers.svg
